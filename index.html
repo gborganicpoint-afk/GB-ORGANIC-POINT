@@ -1,78 +1,44 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GB Organic Point - 12 Premium Products | Gilgit Baltistan</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GB ORGANIC POINT - Pure Organic Products</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f8f6f0} 
-header{background:#0f3d24;color:#fff;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.2)}
-.logo{font-weight:900;font-size:18px;line-height:1} .logo span{color:#ffcc00} .logo small{font-size:10px;font-weight:400;letter-spacing:1px}
-.cart-btn{background:#ff7b00;color:#fff;padding:9px 16px;border-radius:25px;border:none;font-weight:bold;cursor:pointer}
-.hero{background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('p1.jpg');background-size:cover;background-position:center;color:#fff;text-align:center;padding:55px 15px}
-.hero h1{font-size:32px;line-height:1.2} .hero p{margin:10px 0 18px;font-size:14px;opacity:.9}
-.hero a{background:#ff7b00;color:#fff;padding:12px 25px;border-radius:25px;text-decoration:none;font-weight:bold;display:inline-block}
-.strip{background:#fff3d6;text-align:center;padding:10px;font-weight:bold;font-size:13px;border-bottom:1px solid #f0d9a0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:15px;padding:15px;max-width:1100px;margin:auto}
-.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.08);border:1px solid #eee;display:flex;flex-direction:column}
-.card img{width:100%;height:210px;object-fit:cover;background:#f5f5f5}
-.body{padding:12px;text-align:center;flex:1;display:flex;flex-direction:column}
-.badge{background:#e8f5e9;color:#0f3d24;font-size:10px;padding:4px 8px;border-radius:10px;font-weight:800;align-self:center}
-.body h3{font-size:14px;color:#0f3d24;margin:8px 0;min-height:36px;line-height:1.3}
-.price{color:#e67e22;font-weight:900;font-size:16px;margin:5px 0}
-.old{color:#999;font-size:12px;text-decoration:line-through;font-weight:400}
-.sizes{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:8px 0}
-.sizes button{border:1px solid #ddd;padding:6px 9px;border-radius:20px;font-size:11px;cursor:pointer;background:#f9f9f9}
-.sizes button.active{background:#0f3d24;color:#fff;border-color:#0f3d24}
-.qty{display:flex;justify-content:center;align-items:center;gap:10px;margin:8px 0}
-.qty button{width:30px;height:30px;border-radius:50%;border:1px solid #ddd;background:#fff;font-weight:bold;font-size:16px;cursor:pointer}
-.add{margin-top:auto;background:#25D366;color:#fff;border:none;padding:11px;border-radius:9px;font-weight:bold;cursor:pointer;font-size:13px}
-#cartDrawer{position:fixed;right:0;top:0;width:340px;max-width:90%;height:100%;background:#fff;box-shadow:-5px 0 20px rgba(0,0,0,.2);z-index:2000;transform:translateX(100%);transition:.3s;padding:18px;overflow-y:auto}
-#cartDrawer.open{transform:translateX(0)}
-.cartItem{display:flex;justify-content:space-between;border-bottom:1px solid #eee;padding:10px 0;font-size:13px}
-.totalBox{background:#f8f6f0;padding:12px;border-radius:10px;margin-top:15px}
-.checkout{width:100%;background:#25D366;color:#fff;border:none;padding:13px;border-radius:10px;font-weight:900;margin-top:10px;cursor:pointer}
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;z-index:1500}
-.overlay.show{display:block}
-</style></head><body>
-<header><div class="logo">GB <span>ORGANIC POINT</span><br><small>GILGIT BALTISTAN</small></div><button class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>) - Rs <span id="cartTotalTop">0</span></button></header>
-<div class="hero"><h1>Gilgit Baltistan<br>Organic Products Point</h1><p>12 Premium Products • 100% Original Photos • NMR Tested • No Preservatives</p><a href="#shop">SHOP NOW ↓</a></div>
-<div class="strip">🚚 All Pakistan Delivery &nbsp;|&nbsp; Cash on Delivery &nbsp;|&nbsp; Free Delivery Above Rs 5000 &nbsp;|&nbsp; 0343-2444270</div>
-<div class="grid" id="shop"></div>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#f8f9f4;color:#222}
+header{background:#1a3a1a;color:white;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.logo{font-size:22px;font-weight:800;letter-spacing:1px}
+.logo span{color:#8bc34a}
+header a{color:white;text-decoration:none;background:#4CAF50;padding:8px 16px;border-radius:20px;font-weight:600}
+.hero{background:linear-gradient(135deg,#2e7d32,#66bb6a);color:white;text-align:center;padding:50px 20px}
+.hero h1{font-size:32px;margin-bottom:10px}
+.hero p{font-size:16px;opacity:.9;max-width:600px;margin:0 auto 20px}
+.hero button{background:white;color:#2e7d32;border:none;padding:12px 25px;border-radius:25px;font-weight:700;font-size:16px;cursor:pointer}
+.products{max-width:1100px;margin:30px auto;padding:0 15px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.08)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card-body{padding:15px}
+.card-body h3{font-size:18px;margin-bottom:5px}
+.card-body p{font-size:14px;color:#666;margin-bottom:10px}
+.price{font-size:18px;font-weight:800;color:#2e7d32}
+.old{color:#999;text-decoration:line-through;font-size:14px;margin-left:5px}
+.btn{display:block;text-align:center;background:#25D366;color:white;text-decoration:none;padding:10px;border-radius:8px;margin-top:12px;font-weight:700}
+footer{background:#1a3a1a;color:white;text-align:center;padding:30px 15px;margin-top:40px}
+footer p{margin:5px 0;opacity:.8}
+</style>
+</head>
+<body>
+<header><div class="logo">GB <span>ORGANIC POINT</span></div><a href="https://wa.me/923551234567">Order on WhatsApp</a></header>
 
-<div class="overlay" id="overlay" onclick="toggleCart()"></div>
-<div id="cartDrawer"><h2>Your Order 🛒</h2><p style="font-size:12px;color:#666;margin:5px 0">GB Organic Point - 0343-2444270</p><div id="cartItems"></div><div class="totalBox"><div style="display:flex;justify-content:space-between"><span>Subtotal:</span><b id="subTotal">Rs 0</b></div><div style="display:flex;justify-content:space-between;margin-top:6px"><span>Delivery:</span><b id="delCost">Rs 300</b></div><div style="display:flex;justify-content:space-between;margin-top:10px;border-top:1px solid #ddd;padding-top:8px"><span>Total:</span><b id="grandTotal" style="color:#e67e22;font-size:16px">Rs 0</b></div><p id="freeDelMsg" style="font-size:11px;color:green;margin-top:6px"></p></div><button class="checkout" onclick="checkout()">Order on WhatsApp ✓</button><button onclick="toggleCart()" style="width:100%;padding:10px;margin-top:8px;border:1px solid #ddd;background:#fff;border-radius:8px;cursor:pointer">Continue Shopping</button></div>
+<div class="hero">
+<h1>100% Pure & Natural Organic</h1>
+<p>Direct from Gilgit-Baltistan — No Chemicals, No Preservatives. Fresh Harvest.</p>
+<button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Shop Now ↓</button>
+</div>
 
-<script>
-const products=[
-{id:1,name:"Sea Buckthorn GOLD Herbal Tea",img:"p1.jpg",tag:"BEST SELLER",prices:[["100g",999,1199],["250g",1899,2299],["500g",3400,3999]]},
-{id:2,name:"Sea Buckthorn Berries - Dried Superfood",img:"p2.jpg",tag:"NATURE'S GOLD",prices:[["250g",1450,1750],["500g",2750,3200],["1Kg",5200,6000]]},
-{id:3,name:"Sea Buckthorn Powder - Omega 7 Rich",img:"p3.jpg",tag:"OMEGA 7",prices:[["200g",950,1200],["400g",1800,2200],["750g",2700,3200],["1Kg",3800,4500]]},
-{id:4,name:"Sea Buckthorn Juice 100% Natural",img:"p4.jpg",tag:"FRESH JUICE",prices:[["300ml",900,1100],["500ml",1450,1750],["750ml",2100,2500],["1L",2800,3300]]},
-{id:5,name:"Sea Buckthorn Jam - Sugar Free Diet",img:"p5.jpg",tag:"SUGAR FREE",prices:[["250g",750,950],["500g",1400,1700]]},
-{id:6,name:"Sea Buckthorn Syrup 750ml",img:"p6.jpg",tag:"NEW",prices:[["750ml",1950,2300],["1L",2500,3000]]},
-{id:7,name:"Himalayan Multifloral Honey NMR Tested",img:"p7.jpg",tag:"NMR TESTED",prices:[["500g",2500,3000],["1Kg",4800,5500]]},
-{id:8,name:"Wild Honey 100% Pure Wild Forest",img:"p8.jpg",tag:"WILD & RARE",prices:[["500g",3500,4200],["1Kg",6800,7500]]},
-{id:9,name:"Rubinia Honey - Skardu Naturals",img:"p9.jpg",tag:"FLORAL HONEY",prices:[["500g",2800,3300],["1Kg",5400,6200]]},
-{id:10,name:"Cold Pressed Walnut Oil",img:"p10.jpg",tag:"OMEGA-3 RICH",prices:[["100ml",1199,1450],["250ml",1299,1599],["500ml",2399,2899],["1L",4600,5500]]},
-{id:11,name:"Chilgoza Pine Nuts With Shell Premium",img:"p11.jpg",tag:"BRAIN BOOSTER",prices:[["250g",2800,3200],["500g",5500,6300],["1Kg",11000,12500]]},
-{id:12,name:"Dried Apricot Grade A - Chitral Valley",img:"p12.jpg",tag:"GRADE A",prices:[["250g",650,800],["500g",1300,1600],["1Kg",2400,2900]]},
-];
-let cart={};
-function render(){
-let html="";
-products.forEach(p=>{
-let btns=p.prices.map((pr,i)=>`<button class="${i==0?'active':''}" data-price="${pr[1]}" data-old="${pr[2]}" data-size="${pr[0]}" onclick="setSize(this,${p.id})">${pr[0]} - Rs ${pr[1]}</button>`).join('');
-html+=`<div class="card"><img src="${p.img}" onerror="this.src='p1.jpg'"><div class="body"><span class="badge">${p.tag}</span><h3>${p.name}</h3><div class="price">Rs ${p.prices[0][1]} <span class="old">Rs ${p.prices[0][2]}</span></div><div class="sizes">${btns}</div><div class="qty"><button onclick="changeQty(${p.id},-1)">-</button><span id="qty-${p.id}">1</span><button onclick="changeQty(${p.id},1)">+</button></div><button class="add" onclick="addToCart(${p.id})">Add to Cart +</button></div></div>`
-});
-document.getElementById('shop').innerHTML=html;
-}
-let qtys={}; products.forEach(p=>qtys[p.id]=1);
-function changeQty(id,d){qtys[id]=Math.max(1,(qtys[id]||1)+d);document.getElementById('qty-'+id).innerText=qtys[id]}
-function setSize(btn,id){let card=btn.closest('.card');card.querySelectorAll('.sizes button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');card.querySelector('.price').innerHTML=`Rs ${btn.dataset.price} <span class="old">Rs ${btn.dataset.old}</span>`}
-function addToCart(id){let card=document.querySelectorAll('.card')[products.findIndex(p=>p.id==id)];let active=card.querySelector('.sizes button.active');let key=id+'-'+active.dataset.size;let price=parseInt(active.dataset.price);if(cart[key]){cart[key].qty+=qtys[id]}else{cart[key]={name:products.find(p=>p.id==id).name,size:active.dataset.size,price:price,qty:qtys[id]}}updateCart();toggleCart(true);alert("Added to Cart ✓")}
-function updateCart(){let items=document.getElementById('cartItems');let count=0,sub=0,html="";Object.values(cart).forEach(it=>{count+=it.qty;sub+=it.price*it.qty;html+=`<div class="cartItem"><span>${it.name} (${it.size}) x ${it.qty}</span><b>Rs ${it.price*it.qty}</b></div>`});if(!html)html="<p style='padding:15px;text-align:center;color:#888'>Cart khali hai</p>";items.innerHTML=html;let del=sub>=5000||sub==0?0:300;document.getElementById('cartCount').innerText=count;document.getElementById('cartTotalTop').innerText=sub+del;document.getElementById('subTotal').innerText="Rs "+sub;document.getElementById('delCost').innerText=del==0?"FREE":"Rs "+del;document.getElementById('grandTotal').innerText="Rs "+(sub+del);document.getElementById('freeDelMsg').innerText=sub>=5000?"🎉 Aapko FREE Delivery mil gayi!":sub>0?`Rs ${5000-sub} aur order karo to FREE Delivery`:''}
-function toggleCart(forceOpen){let d=document.getElementById('cartDrawer'),o=document.getElementById('overlay');if(forceOpen){d.classList.add('open');o.classList.add('show')}else{d.classList.toggle('open');o.classList.toggle('show')}}
-function checkout(){if(Object.keys(cart).length==0){alert("Cart khali hai!");return}let msg="Salam GB Organic Point! Mujhe ye order karna hai:%0A%0A";Object.values(cart).forEach(it=>{msg+=`- ${it.name} (${it.size}) x ${it.qty} = Rs ${it.price*it.qty}%0A`});let sub=Object.values(cart).reduce((s,i)=>s+i.price*i.qty,0);let del=sub>=5000?0:300;msg+=`%0ASubtotal: Rs ${sub}%0ADelivery: ${del==0?'FREE':'Rs '+del}%0ATotal: Rs ${sub+del}%0A%0AName:%0AAddress:%0APhone:`;window.open(`https://wa.me/923432444270?text=${msg}`)}
-render();updateCart();
-</script>
-<footer style="background:#0f3d24;color:#fff;text-align:center;padding:20px;font-size:13px;line-height:1.7">GB ORGANIC POINT - Gilgit Baltistan<br>0343-2444270 | 100% Natural • No Preservatives • No Added Sugar • Vegan • NMR Tested<br>12 Premium Products • Cash on Delivery Available All Over Pakistan<br>Free Delivery on Orders Above Rs 5000</footer>
-</body></html>
+<div class="products" id="shop">
+<!-- 1 --><div class="card"><img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=500"><div class="card-body"><h3>Organic Wild Honey 500g</h3><p>Pure mountain honey from Hunza valley, raw & unfiltered.</p><div><span class="price">Rs 1,899</span><span class="old">Rs 2,400</span></div><a class="btn" href="https://wa.me/923551234567?text=I want Organic Wild Honey">Order Now</a></div></div>
+<!-- 2 --><div class="card"><img src="https://images.unsplash.com/photo-1508747703725-719777637510?w=500"><div class="card-body"><h3>Apricot Oil 200ml</h3><p>Cold pressed apricot kernel oil for skin & hair.</p><div><span class="price">Rs 1,299</span><span class="old">Rs 1,600</span></div><a class="btn" href="https://wa.me/923551234567?text=I want Apricot Oil">Order Now</a></div></div>
+<!-- 3 --><div class="card"><img src="https://images.unsplash.com/photo-1596591606975-97ee5cef3a1e?w=500"><div class="card-body"><h3>Dried Apricots 1kg</h3><p>Sun-dried sweet apricots, no sulfur, Hunza special.</p><div><span class="price">Rs 1,499</span><span class="old">Rs 1,900</span></div><a class="btn" href="https://wa.me/923551234567?text=I want Dried Apricots">Order Now</a></div></div>
+<!-- 4 --><div class="card"><img src
