@@ -1,53 +1,47 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GB ORGANIC POINT</title><style>body{margin:0;font-family:Arial;background:#f8f9f4}header{background:#1a3a1a;color:#fff;padding:15px;display:flex;justify-content:space-between;position:sticky;top:0;z-index:99}header a{background:#25D366;color:#fff;padding:8px 14px;border-radius:20px;text-decoration:none;font-weight:bold;font-size:13px}.hero{background:#2e7d32;color:#fff;text-align:center;padding:30px 15px}.grid{max-width:1000px;margin:15px auto;padding:0 12px;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-bottom:90px}.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px #0001;text-align:center}.emoji{font-size:55px;padding:15px;background:#f1f8e9}.b{padding:10px}.b h3{font-size:14px;margin:0}.b p{font-size:11px;color:#666;margin:4px 0}.pr{color:#2e7d32;font-weight:800;font-size:15px}select{width:100%;padding:7px;margin:6px 0;border-radius:6px;border:1px solid #ddd}.qty{display:flex;justify-content:center;align-items:center;gap:10px;margin:6px 0}.qty button{width:30px;height:30px;border-radius:50%;border:1px solid #2e7d32;background:#fff;font-size:18px}.add{background:#1a3a1a;color:#fff;border:none;padding:9px;width:100%;border-radius:7px;font-weight:700;cursor:pointer}#cartBar{position:fixed;bottom:0;left:0;right:0;background:#1a3a1a;color:#fff;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;z-index:100}#cartBar button{background:#25D366;border:none;color:#fff;padding:10px 20px;border-radius:20px;font-weight:800}</style></head><body>
-<header><b>GB ORGANIC POINT</b><a href="https://wa.me/923432444270">WhatsApp: 0343-2444270</a></header>
-<div class="hero"><h2>100% Pure Organic From GB</h2><p>Quantity & Weight Select Karein - Total Auto Calculate</p></div>
-<div class="grid" id="grid"></div>
-<div id="cartBar"><span id="cartText">🛒 Cart: 0 items - Rs 0</span><button onclick="checkout()">Checkout on WhatsApp</button></div>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GB ORGANIC POINT - All Products</title><style>body{margin:0;font-family:Arial;background:#f7f8f3}header{background:#1a3a1a;color:#fff;padding:14px;display:flex;justify-content:space-between;position:sticky;top:0;z-index:99}header a{color:#fff;text-decoration:none}.hero{background:linear-gradient(135deg,#2e7d32,#1a3a1a);color:#fff;text-align:center;padding:28px 15px}.hero h2{margin:0}.search{max-width:1000px;margin:12px auto;padding:0 12px}.search input{width:100%;padding:12px;border-radius:25px;border:1px solid #ddd;box-sizing:border-box;font-size:15px}.grid{max-width:1000px;margin:10px auto;padding:0 12px;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-bottom:90px}.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px #0001;cursor:pointer}.emoji{font-size:55px;text-align:center;padding:16px;background:#f1f8e9}.b{padding:11px;text-align:center}.b h3{font-size:13.5px;margin:0;line-height:1.3}.b span{font-size:12px;color:#666}.pr{color:#2e7d32;font-weight:800;display:block;margin:5px 0}.view{background:#1a3a1a;color:#fff;padding:8px;border-radius:7px;font-size:13px;display:block}.cat{background:#e8f5e9;color:#2e7d32;font-size:11px;padding:3px 8px;border-radius:10px;display:inline-block;margin-bottom:4px}.detail{max-width:600px;margin:15px auto;background:#fff;padding:18px;border-radius:14px}.big{font-size:90px;text-align:center;background:#f1f8e9;border-radius:12px;padding:20px}.detail h2{margin:10px 0 5px}.detail p{color:#555;font-size:14px;line-height:1.6}select,input{width:100%;padding:11px;margin:8px 0;border-radius:8px;border:1px solid #ddd;box-sizing:border-box}.btn{background:#25D366;color:#fff;border:none;padding:13px;width:100%;border-radius:10px;font-weight:800;font-size:16px}.back{background:#eee;border:none;padding:8px 14px;border-radius:20px}#cartBar{position:fixed;bottom:0;left:0;right:0;background:#1a3a1a;color:#fff;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;z-index:100}#cartBar button{background:#25D366;border:none;color:#fff;padding:10px 18px;border-radius:20px;font-weight:800}</style></head><body>
+<header><a href="?"><b>GB ORGANIC POINT</b></a><a href="https://wa.me/923432444270">WhatsApp 0343-2444270</a></header>
+<div id="app"></div>
+<div id="cartBar"><span id="cartText">🛒 Cart: 0 items - Rs 0</span><button onclick="checkout()">Checkout WhatsApp</button></div>
 <script>
-let products=[
-["🍯","Wild Honey","Honey",1899,["500g","1kg"]],
-["🫒","Apricot Oil","Oil",1299,["200ml","500ml"]],
-["🍑","Dried Apricots","Apricots",1499,["500g","1kg"]],
-["🌰","Almonds","Almonds",2199,["500g","1kg"]],
-["🥜","Walnuts","Walnuts",1799,["500g","1kg"]],
-["🏔️","Shilajit","Shilajit",3499,["20g","40g"]],
-["🍒","Cherry Jam","Cherry Jam",999,["400g","800g"]],
-["🧃","Buckthorn Juice","Juice",1599,["500ml","1L"]],
-["🍵","Green Tea","Green Tea",899,["250g","500g"]],
-["🍇","Mulberry","Mulberry",1199,["500g","1kg"]],
-["🍓","Apricot Jam","Apricot Jam",899,["400g","800g"]],
-["🎁","Mixed Dry Fruits","Combo",2999,["500g","1kg"]],
+let P=[
+{id:1,cat:"HONEY",e:"🍯",n:"Sidr Honey - Pure Raw",d:"100% Sidr, raw, NMR tested. Khansi, immunity, energy. Karakoram mountains.",o:[["250g",1800],["500g",3500],["1kg",6800]]},
+{id:2,cat:"HONEY",e:"🏔️",n:"Wild Mountain Honey",d:"High altitude wild honey. Dark, strong, medicinal. 100% natural.",o:[["500g",3500],["1kg",6800]]},
+{id:3,cat:"HONEY",e:"🤍",n:"White Honey - Snow Mountain",d:"White creamy honey. Rare, high altitude. Digestion & immunity.",o:[["500g",3000],["1kg",5800]]},
+{id:4,cat:"HONEY",e:"🌼",n:"Mustard Honey",d:"Mustard flower honey. Cough, cold, congestion ke liye best.",o:[["500g",2500],["1kg",4800]]},
+{id:5,cat:"HONEY",e:"🌿",n:"Kikar Honey - Acacia",d:"Light golden, Acacia flower. Energy, skin glow, stomach.",o:[["500g",2800],["1kg",5400]]},
+{id:6,cat:"SEA BUCKTHORN",e:"☕",n:"Sea Buckthorn Tea",d:"Leaf tea. Heart, cholesterol, weight, immunity. Himalayan superfood.",o:[["100g",999],["250g",1899],["500g",3400]]},
+{id:7,cat:"SEA BUCKTHORN",e:"🍵",n:"Sea Buckthorn Gold Herbal Tea",d:"Premium gold blend. Berry + leaves. Antioxidant rich.",o:[["100g",1299],["250g",2399],["500g",4300]]},
+{id:8,cat:"SEA BUCKTHORN",e:"🧃",n:"Sea Buckthorn Juice",d:"Original Hunza juice. Vitamin C 12x orange. Skin, energy.",o:[["500ml",1600],["1 Litre",3000]]},
+{id:9,cat:"SEA BUCKTHORN",e:"🍓",n:"Sea Buckthorn Jam",d:"Natural jam, no preservative. Vitamin C, stomach, immunity.",o:[["300g",1200],["500g",2000]]},
+{id:10,cat:"SEA BUCKTHORN",e:"🧡",n:"Sea Buckthorn Powder",d:"Dried berry powder. Smoothie, tea, skin. Superfood powder.",o:[["100g",1200],["250g",2600],["500g",4800]]},
+{id:11,cat:"SEA BUCKTHORN",e:"💧",n:"Sea Buckthorn Oil - Berry Oil",d:"Pure berry oil. Skin, hair, ulcer, heart. Highly concentrated.",o:[["30ml",2500],["50ml",4000],["100ml",7500]]},
+{id:12,cat:"DRY FRUITS",e:"🍑",n:"Dry Apricots - Hunza",d:"Sun-dried, no sulphur. Vitamin A, Iron, energy. Soft & sweet.",o:[["250g",550],["500g",1000],["1kg",1900]]},
+{id:13,cat:"DRY FRUITS",e:"🌰",n:"Sonara Almond Premium",d:"Brain & memory, Vitamin E, heart healthy. Premium Gilgit.",o:[["250g",1150],["500g",2300],["1kg",4600]]},
+{id:14,cat:"DRY FRUITS",e:"🥜",n:"Walnuts - With Shell",d:"Fresh harvest walnuts with shell. Omega-3, brain.",o:[["500g",750],["1kg",1450],["2kg",2800]]},
+{id:15,cat:"DRY FRUITS",e:"🧠",n:"Walnut Kernels - Shelled",d:"Shelled kernels. Brain food, omega-3, energy.",o:[["250g",900],["500g",1700],["1kg",3300]]},
+{id:16,cat:"DRY FRUITS",e:"🌲",n:"Chilgoza Pine Nuts",d:"Premium Gilgit chilgoza. Brain, healthy fats, Vitamin E.",o:[["100g",1100],["250g",2750],["500g",5500],["1kg",11000]]},
+{id:17,cat:"DRY FRUITS",e:"🍇",n:"Black Kishmish - Munakka",d:"Sun-dried black raisins. Iron, anemia, digestion, energy.",o:[["250g",600],["500g",1150],["1kg",2100]]},
+{id:18,cat:"DRY FRUITS",e:"🍓",n:"Dried White Mulberry",d:"Premium sun-dried mulberry. Immunity, energy, iron.",o:[["250g",600],["500g",1200],["1kg",2100]]},
+{id:19,cat:"DRY FRUITS",e:"🫐",n:"Injeer - Dried Figs",d:"Premium figs. Digestion, blood, bones, constipation.",o:[["250g",1200],["500g",2300],["1kg",4500]]},
+{id:20,cat:"FLOUR & SEEDS",e:"🌾",n:"Buckwheat Seeds - Hunza",d:"Gluten free, 13g protein. Diabetic friendly, low GI.",o:[["250g",450],["500g",750],["1kg",1180],["5kg",4699]]},
+{id:21,cat:"FLOUR & SEEDS",e:"🍞",n:"Buckwheat Flour",d:"Stone-ground Hunza flour. Gluten free, high fiber, protein.",o:[["500g",850],["1kg",1599],["2kg",2999]]},
+{id:22,cat:"KILAO",e:"🍫",n:"Brown Kilao - Energy Bar",d:"Walnut, almond, cashew + mulberry juice. No sugar. Omega-3.",o:[["500g",900],["1kg",1900],["2kg",3200]]},
+{id:23,cat:"KILAO",e:"🤍",n:"White Kilao - Skardu Special",d:"Skardu khas soghat. Walnut + milk cream. Traditional sweet.",o:[["500g",1100],["1kg",2100],["2kg",3800]]},
+{id:24,cat:"OILS",e:"🫒",n:"Apricot Oil - Cold Pressed",d:"Vitamin E, skin glow, hair, heart. 100% cold pressed.",o:[["250ml",1700],["500ml",3200],["1 Litre",6000]]},
+{id:25,cat:"OILS",e:"🧴",n:"Walnut Oil - Cold Pressed",d:"Brain, memory, omega-3, skin, joints.",o:[["100ml",1199],["250ml",1299],["500ml",2399],["1 Litre",4600]]},
+{id:26,cat:"HERBAL TEA",e:"🍵",n:"Tumburuk Mountain Herbal Tea",d:"Wild Himalayan herbs. Gas, acidity, cold, flu, stress relief.",o:[["100g",1200],["250g",2500],["500g",4600]]},
+{id:27,cat:"JUICE",e:"🍇",n:"Plum Juice - Aloobukhara",d:"Natural detox, digestion, cooling. No added sugar.",o:[["500ml",1100],["1 Litre",2000]]},
+{id:28,cat:"SALAJEET",e:"🏔️",n:"Salajeet - Pure Aftabi",d:"CORRECT SPELLING SALAJEET. 80% Fulvic Acid. Stamina, energy, bones, immunity. Pure GB.",o:[["10g",1650],["20g",2650],["30g",3650],["50g",6000]]},
 ];
-let cart={};
-let grid=document.getElementById('grid');
-products.forEach((p,i)=>{
-let price2=p[3]*2;
-grid.innerHTML+=`<div class="card"><div class="emoji">${p[0]}</div><div class="b"><h3>${i+1}. ${p[1]}</h3><p>GB Pure • No Chemical</p><span class="pr">Rs ${p[3]}</span><select id="w${i}"><option>${p[4][0]} - Rs ${p[3]}</option><option>${p[4][1]} - Rs ${price2}</option></select><div class="qty"><button onclick="chg(${i},-1)">-</button><span id="q${i}">1</span><button onclick="chg(${i},1)">+</button></div><button class="add" onclick="add(${i})">Add to Cart</button></div></div>`;
-});
-function chg(i,d){let e=document.getElementById('q'+i);let v=parseInt(e.innerText)+d;if(v<1)v=1;if(v>20)v=20;e.innerText=v}
-function add(i){
-let q=parseInt(document.getElementById('q'+i).innerText);
-let w=document.getElementById('w'+i).value;
-let base=products[i][3];
-let price=w.includes(products[i][4][1])?base*2:base;
-let key=products[i][1]+" "+w.split(' -')[0];
-cart[key]=(cart[key]||0)+q;
-if(!cart[key+"_price"]) cart[key+"_price"]=price;
-update();
-alert(key+" x"+q+" Added!");
-}
-function update(){
-let total=0,count=0;
-for(let k in cart){if(!k.includes("_price")){total+=cart[k]*cart[k+"_price"];count+=cart[k]}}
-document.getElementById('cartText').innerText=`🛒 Cart: ${count} items - Rs ${total}`;
-}
-function checkout(){
-if(Object.keys(cart).length==0){alert("Cart empty hai!");return}
-let msg="*GB ORGANIC POINT - NEW ORDER*%0A%0A";
-let total=0;
-for(let k in cart){if(!k.includes("_price")){let pr=cart[k+"_price"];let qty=cart[k];let sub=pr*qty;total+=sub;msg+=`• ${k} x ${qty} = Rs ${sub}%0A`}}
-msg+=`%0A*Total: Rs ${total}*%0A%0AName:%0AAddress:%0A`;
-window.open("https://wa.me/923432444270?text="+msg);
-}
-</script>
-</body></html>
+let cart=JSON.parse(localStorage.getItem('gbcart')||'{}');
+function save(){localStorage.setItem('gbcart',JSON.stringify(cart));update()}
+function update(){let t=0,c=0;for(let k in cart){t+=cart[k].q*cart[k].p;c+=cart[k].q}document.getElementById('cartText').innerText=`🛒 Cart: ${c} items - Rs ${t}`}
+function home(){let h=`<div class="hero"><h2>100% Pure Organic From Gilgit Baltistan</h2><p>28 Products • Har Product Ka Alag Page • Insta Original Rates • COD All Pakistan</p></div><div class="search"><input oninput="filter(this.value)" placeholder="🔍 Search: honey, buckthorn, kilao, salajeet..."></div><div class="grid" id="grid">`;P.forEach(p=>{h+=`<div class="card" onclick="openP(${p.id})"><div class="emoji">${p.e}</div><div class="b"><span class="cat">${p.cat}</span><h3>${p.id}. ${p.n}</h3><span>${p.o[0][0]} se start</span><span class="pr">Rs ${p.o[0][1]} - Rs ${p.o[p.o.length-1][1]}</span><span class="view">View Product →</span></div></div>`});h+=`</div><p style="text-align:center;padding:0 15px 70px;color:#666;font-size:13px">GB ORGANIC POINT • Insta @gborganicpoint • WhatsApp 0343-2444270 • Cash on Delivery Available</p>`;document.getElementById('app').innerHTML=h;update();}
+function filter(v){let grid=document.getElementById('grid');v=v.toLowerCase();grid.innerHTML='';P.filter(p=>p.n.toLowerCase().includes(v)||p.cat.toLowerCase().includes(v)).forEach(p=>{grid.innerHTML+=`<div class="card" onclick="openP(${p.id})"><div class="emoji">${p.e}</div><div class="b"><span class="cat">${p.cat}</span><h3>${p.id}. ${p.n}</h3><span>${p.o[0][0]} se start</span><span class="pr">Rs ${p.o[0][1]} - Rs ${p.o[p.o.length-1][1]}</span><span class="view">View Product →</span></div></div>`})}
+function openP(id){let p=P.find(x=>x.id==id);let opts=p.o.map(o=>`<option value="${o[1]}">${o[0]} - Rs ${o[1]}</option>`).join('');let related=P.filter(x=>x.cat==p.cat&&x.id!=id).slice(0,4).map(x=>`<div class="card" onclick="openP(${x.id})"><div class="emoji">${x.e}</div><div class="b"><h3>${x.n}</h3><span class="pr">Rs ${x.o[0][1]}</span></div></div>`).join('');document.getElementById('app').innerHTML=`<div class="detail"><button class="back" onclick="home()">← All Products</button><div class="big">${p.e}</div><span class="cat">${p.cat}</span><h2>${p.n}</h2><p>${p.d}</p><p><b>✅ 100% Pure • No Chemical • Gilgit Baltistan Origin<br>✅ Cash on Delivery • EasyPaisa Available</b></p><label>Weight / Grams / Kg Select Karein:</label><select id="w">${opts}</select><label>Quantity (Calculator):</label><div style="display:flex;gap:10px;align-items:center"><button onclick="qchg(-1)" style="width:40px;height:40px;border-radius:50%;font-size:20px">-</button><span id="qq" style="font-size:18px;font-weight:800">1</span><button onclick="qchg(1)" style="width:40px;height:40px;border-radius:50%;font-size:20px">+</button><span id="total" style="margin-left:auto;font-weight:800;color:#2e7d32">Total: Rs ${p.o[0][1]}</span></div><label>Apna Naam:</label><input id="nm" placeholder="Ex: Ahmed"><label>Full Address:</label><input id="ad" placeholder="City, Complete Address"><button class="btn" onclick="buy(${p.id})">🛒 Add & Order on WhatsApp</button><button class="btn" style="background:#1a3a1a;margin-top:8px" onclick="addOnly(${p.id})">Only Add to Cart</button><p style="font-size:12px;text-align:center">Delivery: COD Rs 300 • Advance Payment FREE Delivery • EasyPaisa: Inamullah 0343-2444270</p></div><h3 style="text-align:center">Related Products</h3><div class="grid" style="padding-bottom:70px">${related}</div>`;document.getElementById('w').onchange=()=>{let price=parseInt(document.getElementById('w').value);let q=parseInt(document.getElementById('qq').innerText);document.getElementById('total').innerText='Total: Rs '+(price*q)};}
+function qchg(d){let e=document.getElementById('qq');let v=parseInt(e.innerText)+d;if(v<1)v=1;if(v>20)v=20;e.innerText=v;let price=parseInt(document.getElementById('w').value);document.getElementById('total').innerText='Total: Rs '+(price*v)}
+function addOnly(id){let p=P.find(x=>x.id==id);let w=document.getElementById('w');let wt=w.options[w.selectedIndex].text.split(' -')[0];let price=parseInt(w.value);let q=parseInt(document.getElementById('qq').innerText);let key=p.n+' '+wt;cart[key]={q:(cart[key]?.q||0)+q,p:price};save();alert('Added to cart!');home()}
+function buy(id){addOnly(id);checkout()}
+function checkout(){if(Object.keys(cart).length==0){alert('Cart empty hai');return}let msg="*GB ORGANIC POINT - NEW ORDER*%0A%0A";let total=0;for(let k in cart){let s=cart[k].p*cart[k].q;total+=s;msg+=`• ${k} x ${cart[k].q} = Rs ${s}%0A`}msg+=`%0A*Total: Rs ${total}*%0A%0AName: ${document.getElementById('nm')?.value||''}%0AAddress: ${document.getElementById('ad')?.value||''}`;window.open("https://wa.me/923432444270?text="+msg)}
+home();
+</script></body></html>
